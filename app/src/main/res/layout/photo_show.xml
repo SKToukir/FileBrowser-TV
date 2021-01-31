@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:screenOrientation="portrait">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal">
+
+        <!--
+             	<com.jrm.localmm.ui.photo.ImageViewTouch
+				android:id="@+id/image"
+				android:focusableInTouchMode="true"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" >
+			</com.jrm.localmm.ui.photo.ImageViewTouch>
+        -->
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/aviPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+        <com.walton.filebrowser.ui.photo.ScrollableViewGroup
+            android:id="@+id/ViewFlipper"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/PlayControlPanel"
+            android:layout_below="@+id/ViewIndication"
+            android:layout_toRightOf="@+id/CoverView0123">
+
+            <include layout="@layout/imageviewtouch" />
+
+            <include layout="@layout/imagesurfaceview" />
+
+            <include layout="@layout/surfaceview4k2k" />
+
+            <include layout="@layout/gifview" />
+        </com.walton.filebrowser.ui.photo.ScrollableViewGroup>
+    </RelativeLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <include layout="@layout/photo_player_control" />
+    </LinearLayout>
+
+</FrameLayout>

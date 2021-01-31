@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35dip"
+    android:layout_marginLeft="12dip"
+    android:gravity="left"
+    android:orientation="horizontal"
+    android:paddingTop="10dip">
+
+    <ImageView
+        android:id="@+id/leftImageView"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_marginLeft="1dip"
+        android:src="@drawable/icon_file_song" />
+
+    <TextView
+        android:id="@+id/ListNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dip"
+        android:ellipsize="marquee"
+        android:gravity="left"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>

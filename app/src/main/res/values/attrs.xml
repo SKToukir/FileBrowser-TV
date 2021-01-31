@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NumberProgressBar">
+        <attr name="progress_current" format="integer" />
+        <attr name="progress_max" format="integer" />
+
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+
+        <attr name="progress_reached_bar_height" format="dimension" />
+        <attr name="progress_unreached_bar_height" format="dimension" />
+
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+
+        <attr name="progress_text_offset" format="dimension" />
+
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="numberProgressBarStyle" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ColorFlyingFrameView">
+        <attr name="flyingBorderColor" format="color" />
+        <attr name="flyingBorderWidth" format="dimension" />
+        <attr name="flyingShadWidth" format="dimension" />
+        <attr name="flyingShadowColor" format="color" />
+        <attr name="flyingRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseFlyingFrameView">
+        <attr name="flyingDuration" format="integer" />
+        <attr name="flyingSpace" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="StorageProgressBar">
+        <attr name="showProgressText" format="boolean" />
+        <attr name="progress" format="integer" />
+        <attr name="secondaryProgress" format="integer" />
+        <attr name="progressColor" format="color" />
+        <attr name="secondaryProgressColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="primaryCapSize" format="integer" />
+        <attr name="secodaryCapSize" format="integer" />
+        <attr name="primaryCapVisibility" format="boolean" />
+        <attr name="secodaryCapVisibility" format="boolean" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+    <!-- Character View -->
+    <declare-styleable name="CharacterView">
+        <attr name="character" format="string"/>
+        <attr name="characterTextColor" format="color"/>
+        <attr name="backgroundRoundAsCircle" format="boolean"/>
+        <attr name="backgroundRadius" format="dimension"/>
+        <attr name="characterPadding" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="WaveLoadingView">
+        <attr name="wlv_borderWidth" format="dimension"/>
+        <attr name="wlv_borderColor" format="color"/>
+        <attr name="wlv_progressValue" format="integer"/>
+        <attr name="wlv_shapeType" format="enum">
+            <enum name="triangle" value="0" />
+            <enum name="circle" value="1" />
+            <enum name="square" value="2" />
+            <enum name="rectangle" value="3" />
+        </attr>
+        <attr name="wlv_triangle_direction" format="enum">
+            <enum name="north" value="0" />
+            <enum name="south" value="1" />
+            <enum name="east" value="2" />
+            <enum name="west" value="3" />
+        </attr>
+        <attr name="wlv_round_rectangle" format="boolean"/>
+        <attr name="wlv_round_rectangle_x_and_y" format="integer"/>
+        <attr name="wlv_waveColor" format="color"/>
+        <attr name="wlv_wave_background_Color" format="color"/>
+        <attr name="wlv_waveAmplitude" format="float"/>
+        <attr name="wlv_titleTop" format="string"/>
+        <attr name="wlv_titleCenter" format="string"/>
+        <attr name="wlv_titleBottom" format="string"/>
+        <attr name="wlv_titleTopSize" format="dimension"/>
+        <attr name="wlv_titleCenterSize" format="dimension"/>
+        <attr name="wlv_titleBottomSize" format="dimension"/>
+        <attr name="wlv_titleTopColor" format="color"/>
+        <attr name="wlv_titleCenterColor" format="color"/>
+        <attr name="wlv_titleBottomColor" format="color"/>
+        <attr name="wlv_titleTopStrokeColor" format="color"/>
+        <attr name="wlv_titleTopStrokeWidth" format="dimension"/>
+        <attr name="wlv_titleBottomStrokeColor" format="color"/>
+        <attr name="wlv_titleBottomStrokeWidth" format="dimension"/>
+        <attr name="wlv_titleCenterStrokeColor" format="color"/>
+        <attr name="wlv_titleCenterStrokeWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="BaseVisualizer">
+        <attr name="avDensity" format="float"/>
+        <attr name="avColor" format="color"/>
+        <attr name="avType" format="string"/>
+        <attr name="avGravity" format="string"/>
+        <attr name="avWidth" format="dimension"/>
+        <attr name="avSpeed" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="EqualizerView">
+        <attr name="foregroundColor" format="integer" />
+        <attr name="animDuration" format="integer" />
+    </declare-styleable>
+
+    <attr name="HListViewStyle" format="reference"/>
+
+    <declare-styleable name="HListView">
+        <!--item高度-->
+        <attr name="item_height" format="dimension"/>
+        <!--item宽度-->
+        <attr name="item_width" format="dimension"/>
+        <!--item获得焦点后缩放因子-->
+        <attr name="item_scale_factor" format="float"/>
+        <!--缩放动画持续时间-->
+        <attr name="item_scale_duration" format="integer"/>
+        <!--item之间的间距-->
+        <attr name="spacing" format="dimension"/>
+        <!--控件滚动到最左侧溢出范围-->
+        <attr name="left_offset" format="dimension"/>
+        <!--控件滚动到最右侧溢出范围-->
+        <attr name="right_offset" format="dimension"/>
+        <!--item相对于HListView的Gravity-->
+        <attr name="gravity" format="enum">
+            <enum name="top" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="bottom" value="2"/>
+        </attr>
+        <attr name="bg_color" format="color"/>
+    </declare-styleable>
+
+</resources>

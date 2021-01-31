@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#b0000000" >
+
+<group>
+        <item android:id="@+id/vodreg"
+              android:icon="@drawable/icon_tips_red"
+              android:title="@string/video_divx_vod" >
+        </item>
+    </group>
+</menu>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="500dp"
+    android:padding="@dimen/px20"
+    android:layout_height="wrap_content"
+    android:background="#cc000000"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/customfontstyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copying..."
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
+    <!--    <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/tv_title"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            />-->
+    <com.walton.filebrowser.view.NumberProgressBar
+        android:id="@+id/pb"
+        style="@style/NumberProgressBar_Default"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        custom:progress_current="0"
+        custom:progress_text_size="16sp" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_rectangle"
+        android:padding="10dp"
+        android:text="Cancel task"
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
+</RelativeLayout>

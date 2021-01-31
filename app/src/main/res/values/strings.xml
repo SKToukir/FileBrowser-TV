@@ -1,0 +1,390 @@
+<resources>
+    <string name="app_name_app">File Browser</string>
+    <string name="clipbrd">Added to the clipboard！</string>
+    <string name="clipbrd_fialed">Adding a task to the clipboard failed！</string>
+    <string name="noTask">There are currently no replication tasks</string>
+    <string name="delSuccess">Deleted file successfully</string>
+    <string name="copySuccess">Copy file successfully</string>
+    <string name="file_existed">File name already exists,Rename failed!</string>
+    <string name="rename_file_fail">Renaming a file failed</string>
+    <string name="rename_file_Illegal">Illegal file name!</string>
+    <string name="btn_ok">Ok</string>
+    <string name="btn_cancle">Cancel</string>
+
+    <string name="nullDir">Folder is empty</string>
+
+
+    <string name="folder">folder</string>
+    <string name="sambarootDirectory">/mnt/samba</string>
+    <string name="unsupport_format">This format can not play</string>
+    <string name="exit_ok">Ok</string>
+    <string name="exit_cancel">Cancel</string>
+    <string name="current_time">Current time :</string>
+    <string name="total_duration">Total time :</string>
+    <string name="choice">choice</string>
+    <string name="confirm">confirm</string>
+    <string name="exit_title">exit</string>
+    <string name="exit_confirm">confirm delete?</string>
+    <string name="net_disconnect">The net is disconnect,please check it!</string>
+    <string name="display_pip">Display PIP</string>
+    <string name="hide_pip">Hide PIP</string>
+    <string name="pre_channel">Previous Channel</string>
+    <string name="next_channel">Next Channel</string>
+    <string name="max_tip">The maxmium scale ratio!</string>
+    <string name="min_tip">The minimum scale ratio!</string>
+    <string name="busy_tip">The system is busy,Please retry later!</string>
+
+    <!-- ####################文件浏览模块资源定义区#################### -->
+    <string name="picture">picture</string>
+    <string name="song">song</string>
+    <string name="video">video</string>
+    <string name="all">all</string>
+    <string name="page_up">page up</string>
+    <string name="page_down">page down</string>
+    <string name="samba_usr">user name:</string>
+    <string name="samba_pwd">password:</string>
+    <string name="samba_confirm">login</string>
+    <string name="samba_cancel">cancel</string>
+    <string name="slash">/</string>
+
+    <!-- 加载进度提示信息定义区 -->
+    <string name="loading_usb_device">Loading USB Device</string>
+    <string name="loading_local_resource">Loading Local Resource, Please Wait</string>
+    <string name="loading_dlna_device">Loading DLNA Device, Please Wait</string>
+    <string name="loading_dlna_resource">Loading DLNA Resource, Please Wait</string>
+    <string name="miss_dlna_device">Load DLNA Resource Failed</string>
+    <string name="loading_samba_device">Loading SAMBA Device, Please Wait</string>
+    <string name="loading_samba_resource">Loading SAMBA Resource, Please Wait</string>
+    <string name="miss_samba_device">Load SAMBA Resource Failed</string>
+    <string name="login_wrong_password">Wrong Password</string>
+    <string name="login_failed">Failed To Login SAMBA</string>
+    <string name="login_other_failed">Login SAMBA Exception</string>
+    <string name="network_unconnected">Unconnected Network, Please Check And Retry
+
+    </string>
+    <string name="login_samba">Login Samba, Please Wait</string>
+    <string name="logging_out_samba">Logouting Samba, Please Wait</string>
+    <string name="mount_failed">Mount Samba Failed</string>
+
+    <string-array name="data_source">
+        <item>local disk device</item>
+        <item>network SAMBA device</item>
+        <!--<item>network DLNA device</item>-->
+    </string-array>
+
+    <!-- ####################媒体播放器资源定义区#################### -->
+    <!-- 图片播放模块资源定义区 -->
+    <string name="file_name">File name:</string>
+    <string name="photo_info">Photo info</string>
+    <string name="file_create_time">Create time:</string>
+    <string name="file_size">File size:</string>
+    <string name="file_format">File format:</string>
+    <string name="display_img_name">name of display picture</string>
+    <string name="disk_eject">disk eject</string>
+    <string name="photo_3D_toast">not to operate in 3D mode</string>
+    <string name="photo_set_wallpaper">photo wallpaper</string>
+    <string name="first_photo">first photo!</string>
+    <string name="last_photo">last photo!</string>
+    <string name="can_not_decode">The photo is too large to be analysised!</string>
+    <string name="can_not_decode_previous">The previous photo is too large to be analysised!</string>
+    <string name="can_not_decode_next">The next photo is too large to be analysised!</string>
+    <string name="current_pic">Current picture is:</string>
+    <string name="is_setting_wallpaper">It is setting wallpaper,please wait。。。</string>
+    <string name="picture_can_not_decode">This picture can not decode!</string>
+    <string name="picture_decoding">picture is decoding。。。</string>
+    <string name="picture_wallpaper">Wallpaper is setting。。。</string>
+    <string name="picture_decode_failed">picture decode failed!</string>
+    <string name="picture_can_not_set3d">is not 3D picture!</string>
+    <string name="picture_playing_time">playing interval time</string>
+    <string name="picture_animation_setting">animation effect</string>
+    <string name="photo_GIF_toast">not to operate in GIF animation mode</string>
+    <string name="photo_scale_or_rotate_toast">not to operate in scale or rotate mode</string>
+    <string name="photo_pan_success_toast">image pan successfully!</string>
+    <string name="photo_pan_failed_toast">image pan failed!</string>
+    <string name="photo_pan_parameter_invalid">image pan parameter invalid!</string>
+    <string name="photo_media_play_next">Continue to play next photo?</string>
+    <string name="file_not_support">The file is not supported</string>
+    <string name="photo_not_support_scale">The platform memory is too low to support scale!</string>
+    <string name="photo_zooming">image zooming...</string>
+    <string name="photo_rotating">image rotating...</string>
+
+    <!-- 音乐播放模块资源定义区 -->
+    <string name="music_info">Music info</string>
+    <string name="file_duration">File duration:</string>
+    <string name="Artist_name">Artist name:</string>
+    <string name="file_path">File path:</string>
+    <string name="none_lyrics_find">Did not find lyrics!</string>
+    <string name="unknown">Unknown</string>
+    <string name="singer">Singer:</string>
+    <string name="current_song">Current song:</string>
+    <string name="music_media_play_next">Continue to play next music?</string>
+    <!-- 视频播放模块资源定义区 -->
+    <string name="no_video_track">none video track</string>
+    <string name="audio_codec">Audio codec:</string>
+    <string name="video_codec">Video codec:</string>
+    <string name="duration">Duration:</string>
+    <string name="default_time">--:--:--</string>
+    <string name="video_default_time">00:00:00</string>
+    <string name="choose_time_0">0</string>
+    <string name="choose_time_colon">:</string>
+    <string name="programe_info">Program info</string>
+    <string name="show_info">play error </string>
+    <string name="buffering">buffering...</string>
+    <string name="playing">playing</string>
+    <string name="video_subtitle">Video subtitle</string>
+    <string name="video_track">Video track</string>
+    <string name="video_rotate_mode">Rotate mode</string>
+    <string name="video_media_play_next">Continue to play next video?</string>
+    <string name="video_media_error_unknown">video media error unknown</string>
+    <string name="video_media_error_malformed">video media error malformed</string>
+    <string name="video_media_error_io">video media error io</string>
+    <string name="video_media_error_unsupported">video media error unsupported</string>
+    <string name="video_media_error_format_unsupport">video media error format unsupport</string>
+    <string name="video_media_error_not_connected">video media error not connected</string>
+    <string name="video_media_error_audio_unsupport">video media error audio unsupport</string>
+    <string name="video_media_error_video_unsupport">video media error video unsupport</string>
+    <string name="video_media_error_no_license">video media error no license</string>
+    <string name="video_media_error_license_expired">video media error license expired</string>
+    <string name="video_media_other_error_unknown">other unknown error</string>
+    <string name="video_media_error_not_valid">video media error not valid</string>
+    <string name="video_media_error_server_died">media server died</string>
+    <string name="video_media_info_video_decoder_over_capability">not support 4k2k in pip mode</string>
+    <string name="video_media_infor_no_index">video no index,it not seeked</string>
+    <string name="video_media_infor_no_index_ab">video no index,it not set AB</string>
+    <string name="video_no_support_two_4k">Does not support the two 4k video.</string>
+    <string name="video_sub_no_support_fullscreen_in_4K2K">Video sub do not support fullscreen in 4K2K!</string>
+    <string name="video_display_previous_video_last_frame">Because the video only has audio, it displays the last frame of previous video in video seamless playback!!</string>
+    <string name="video_iso_tip">Not supported by the blu-ray ISO file! </string>
+    <string name="open_file_fail">Unable to open the file! </string>
+    <string name="subtitle_type">subtitle type</string>
+    <string name="subtitle_out_path">subtitle out path</string>
+    <string name="subtitle_in_no">subtitle in no</string>
+    <string name="subtitle_language">subtitle language</string>
+    <string name="subtitle_color">subtitle color</string>
+    <string name="subtitle_font">subtitle font</string>
+    <string name="subtitle_font_size">subtitle font size</string>
+    <string name="subtitle_frame">subtitle frame</string>
+    <string name="subtitle_area">subtitle area</string>
+    <string name="subtitle_adjust">subtitle adjust</string>
+    <string name="subtitle_trackname">subtitle trackname</string>
+    <string name="subtitleList">subtitleList</string>
+    <string name="playList">Playlist</string>
+    <string name="subtitle_setting">Subtitle Setting</string>
+    <string name="a_b_section_repeat">A-B Section repeat</string>
+    <string name="section_replay">Section replay</string>
+    <string name="set_begin_a">Set starting point A</string>
+    <string name="set_begin_b">Set starting point B</string>
+    <string name="audio_track_count">Track count</string>
+    <string name="audio_track_number">Track number</string>
+    <string name="audio_track_duration">Track duration</string>
+    <string name="audio_track_language">Track language</string>
+    <string name="audio_track_codec">Track codec</string>
+    <string name="audio_track_channel">Track channel</string>
+    <string name="audio_track_name">Track name</string>
+    <string name="audio_track_setting">Track setting</string>
+    <string name="point_a">The point A position</string>
+    <string name="point_b">The point B position</string>
+    <string name="one_times_speed">1X</string>
+    <string name="x_times_speed">times speed</string>
+    <string name="playing_settings">Playing settings</string>
+    <string name="open_ab_repeat">open A-B repeat</string>
+    <string name="set_point_a_first">set point a first</string>
+    <string name="set_b_point_failed">setting B point failed, time interval of AB point is too short</string>
+    <string name="video_rotate_degrees_setting">video rotate degree setting</string>
+
+    <string name="video_3D_none">OFF</string>
+    <string name="video_3D_side_by_side">SBS</string>
+    <string name="video_3D_top_bottom">TB</string>
+    <string name="video_3D_frame_packing">FP</string>
+    <string name="video_3D_line_alternative">LA</string>
+    <string name="video_3D_2dto3d">2D-3D</string>
+    <string name="video_3D_3dto2d">3D-2D</string>
+    <string name="video_3D_auto">auto</string>
+    <string name="video_3D_check_board">CB</string>
+    <string name="video_3D_pixel_alternative">PA</string>
+    <string name="video_3D_frame_alternative">FA</string>
+    <string name="video_3D_auto_detect_info">auto detect 3D failed,please choose 3d format mannully!</string>
+
+    <string name="video_HDR_none">off</string>
+    <string name="video_HDR_auto">auto</string>
+    <string name="video_HDR_low">low</string>
+    <string name="video_HDR_middle">middle</string>
+    <string name="video_HDR_high">high</string>
+    <string name="video_HDR_ref_mode">ref mode</string>
+
+    <string name="video_DolbyHDR_vivid">vivid</string>
+    <string name="video_DolbyHDR_bright">bright</string>
+    <string name="video_DolbyHDR_dark">dark</string>
+    <string name="can_not_open_dual_in_3d_mode">cannot open dual decode in 3D mode</string>
+    <string name="can_not_open_dual_in_hdr_mode">cannot open dual decode in open HDR mode</string>
+    <string name="can_not_open_dual_in_dolbyhdr_mode">cannot open dual decode in Dolby HDR mode</string>
+    <string name="can_not_open_3D">cannot open 3D in dual decode mode</string>
+    <string name="can_not_open_3D_in_HDR_or_dolbyHDR_mode_except_2DTo3D">cannot open 3d in open HDR or Dolby HDR mode except 2dto3d</string>
+    <string name="can_not_open_HDR_in_dualdecode_mode">Cannot open HDR in dual decode mode</string>
+    <string name="can_not_open_DolbyHDR_in_dualdecode_mode">cannot open Dolby HDR in dual decode mode</string>
+    <string name="can_not_open_HDR_in_3d_mode_except_2DTo3D">Cannot open HDR in 3d mode except 2DTo3D</string>
+    <string name="can_not_open_DolbyHDR_in_3d_mode_except_2DTo3D">cannot open Dolby HDR in 3d mode except 2DTo3D</string>
+    <string name="can_not_open_3D_pip">cannot open 3D in PIP mode</string>
+    <string name="video_start_time">video start time</string>
+    <string name="video_buffer_time">Buffer Time : </string>
+    <string name="video_first_video_frame_time">Push First Frame Time : </string>
+    <string name="video_breakpoint_play">skip to the last play?</string>
+    <string name="continuous_play">Continuous play</string>
+    <string name="video_audio_AC4">AC4</string>
+    <string name="video_swdr">SWDR</string>
+    <string name="video_swdr_level">SWDR Level</string>
+    <string name="video_swdr_status">SWDR Status</string>
+    <string name="can_not_open_dual_pip">cannot open dual decode in PIP/POP/DUALVIEW mode</string>
+    <string name="can_not_open_dual_4kVideo">cannot open dual decode in 4k1k/4k2k mode</string>
+    <string name="can_not_open_dual_HEVC_Video">cannot open dual decode in H.265/HEVC mode</string>
+    <string name="can_not_open_dual_Thumbnail_Video">cannot open dual decode in Thumbnail mode</string>
+    <string name="can_not_open_dual_this_platform">cannot open dual decode in the platform!</string>
+    <string name="can_not_open_thumbnail_dual_Video">cannot open thumbnail in Dual Decode mode</string>
+    <string name="can_not_open_thumbnail_4kVideo">cannot open thumbnail in 4k1k/4k2k mode</string>
+    <string name="can_not_open_thumbnail_3DMode">cannot open thumbnail in 3D mode</string>
+    <string name="can_not_open_thumbnail_this_platform">Thumbnail is not supported in the platform!</string>
+    <string name="can_not_open_dual_rotate_mode">cannot open dual decode in Rotate mode</string>
+    <string name="can_not_open_rotate_dual_mode">cannot open rotate in Dual View mode</string>
+    <string name="can_not_support_aspect_ratio">current video can not support aspect ratio</string>
+    <string name="can_not_open_HDR_this_platform">This platform do not support open HDR</string>
+    <string name="can_not_open_Dolby_HDR_this_platform">this platform do not support Dolby HDR</string>
+    <string name="unsupport_3D_in_this_platform">Don\'t support 3D in this platform</string>
+    <!--divx string -->
+
+    <!--    VOD -->
+    <string name="video_divx_vod">DivX(R) VOD</string>
+    <!--    register -->
+    <string name="divx_vod_drm_register">
+        You must register your device to play DivX(R) protected videos</string>
+    <string name="divx_vod_drm_registration_code">Registration code:</string>
+    <string name="divx_vod_drm_register_at">Register at</string>
+    <!--    Deregistration -->
+    <string name="divx_vod_drm_deregistration_confirm">
+        Your device is already registered \n \n
+        Are you sure you wish to deregister?</string>
+    <string name="divx_vod_drm_deregistration_code">Deregistration code:</string>
+    <string name="divx_vod_drm_deregister_at">Deregister at</string>
+    <string name="divx_vod_drm_deregister">Continue with registration?</string>
+    <!--    Authorization Error -->
+    <string name="divx_vod_drm_authorization_error">
+        Your device is not authorized to play this DivX(R) protected video</string>
+    <!--    Rental -->
+    <string name="divx_vod_drm_rental">This DivX(R) rental has used</string>
+    <string name="divx_vod_drm_views">views</string>
+    <string name="divx_vod_drm_rental_expired">This DivX rental has expired.</string>
+    <string name="divx_vod_drm_rental_confirm">Continue?</string>
+    <!--    Unauthorized DivX DRM Version -->
+    <!--    Unauthorized Video Output -->
+    <!--    URL -->
+    <string name="video_divx_vod_url">http://vod.divx.com</string>
+    <string name="divx_not_support">It\'s not support DivX in this device</string>
+
+
+    <!-- "显示外接字幕", "点击选择路径", "无", "未知", "宋体", "中", "白色", "否", "视频画面底部", "0" -->
+    <string name="subtitle_0_value_1">show external subtitle</string>
+    <string name="subtitle_0_value_2">show inner subtitle</string>
+    <string name="subtitle_1_value_1">choose path</string>
+    <string name="subtitle_2_value_2">subtitle </string>
+    <string name="subtitle_3_value_1">unknown</string>
+    <string name="subtitle_4_value_1">default</string>
+    <string name="subtitle_4_value_2">sans_serif</string>
+    <string name="subtitle_4_value_3">monospace</string>
+    <string name="subtitle_5_value_1">big</string>
+    <string name="subtitle_5_value_2">middle</string>
+    <string name="subtitle_5_value_3">small</string>
+    <string name="subtitle_6_value_1">white</string>
+    <string name="subtitle_6_value_2">black</string>
+    <string name="subtitle_6_value_3">blue</string>
+    <string name="subtitle_7_value_1">no</string>
+    <string name="subtitle_7_value_2">yes</string>
+    <string name="subtitle_8_value_1">bottom</string>
+    <string name="subtitle_8_value_2">top</string>
+
+    <string-array name="subtitle_setting_opt">
+        <item>show external subtitle</item>
+        <item>choose path</item>
+        <item>none</item>
+        <item>unknown</item>
+        <item>default</item>
+        <item>middle</item>
+        <item>white</item>
+        <item>no</item>
+        <item>bottom</item>
+        <item>0</item>
+        <item>subtitle track name</item>
+    </string-array>
+
+    <string name="choose_time_failed">cannot location!!</string>
+    <string name="choose_time_invalid">invalid time, please retry!</string>
+    <string name="subtitle_change_invalid">Image caption does not support this operation!</string>
+    <string name="external_subtitle_setting_operation_invalid">Does not support this operation! please check external subtitle path wheteher been set!</string>
+    <string name="inner_subtitle_setting_opration_invalid">This movie have not inner subtitle,Unsuport operation!</string>
+
+    <string-array name="play_setting_opt">
+        <item>open</item>
+        <item>close</item>
+        <item>open</item>
+        <item>close</item>
+        <item>close</item>
+        <item></item>
+        <item>close</item>
+        <item>close</item>
+        <item>close</item>
+        <item>open</item>
+        <item>close</item>
+        <item>close</item>
+    </string-array>
+
+    <string name="play_setting_0_value_1">open</string>
+    <string name="play_setting_0_value_2">close</string>
+    <string name="video_size_unknown">unknown</string>
+
+    <string-array name="audio_track_setting_opt">
+        <item>audio track 1</item>
+        <item>1</item>
+        <item>00:00:00</item>
+        <item>unknown</item>
+        <item>Undetermined</item>
+        <item>Undetermined</item>
+        <item>Undetermined</item>
+    </string-array>
+
+    <string name="audio_track_setting_0_value_1">audio track</string>
+    <string name="subtitle_setting_0_value_1">inner</string>
+    <string name="subtitle_setting_0_value_2">external</string>
+
+    <string name="video_goldenlefteye_mode">Golden left eye</string>
+    <string name="dual_mode_not_support_golden_left_eye">Dual decode mode can not support golden left eye!</string>
+    <string name="stb_not_support_golden_left_eye">This platform can not support golden left eye!</string>
+
+    <string name="four_video_play_in_gridview">four video play in gridview</string>
+    <string name="nine_video_play_in_gridview">nine video play in gridview</string>
+    <string name="not_support_multiplayback">This platform can not support multiplayback</string>
+
+    <string name="video_HDR_mode">Open HDR</string>
+
+    <string name="video_dolby_on">Dolby Vision</string>
+    <string name="audio_dolby_on">Dolby Atmos</string>
+    <string name="audio_dolby_atmos_detected">Dolby Atmos content detected</string>
+    <string name="audio_dolby_atmos_info">Turn Dolby Atmos on for the best sound experience</string>
+
+    <string name="my_device">My Device</string>
+    <string name="choose_equipment">Please insert the storage device</string>
+    <string name="sdcard">SDCard</string>
+    <string name="alls">ALL</string>
+    <string name="videos">VIDEO</string>
+    <string name="musics">MUSIC</string>
+    <string name="pictures">PICTURE</string>
+    <string name="no_files">No file found!</string>
+    <string name="no_video">No video file!</string>
+    <string name="no_music">No music file!</string>
+    <string name="no_picture">No image file!</string>
+    <string name="update_time">Modify Time</string>
+    <string name="directory">directory</string>
+    <string name="unknow">unknow</string>
+    <string name="cause_anr">Click to return may cause immediate death of the interface card, please wait Click to return</string>
+    <string name="install_equi">Install the equipment success</string>
+    <string name="uninstall_equi">Uninstall the equipment success</string>
+    <string name="back">Back</string>
+    <string name="mm_version">vW101</string>
+</resources>

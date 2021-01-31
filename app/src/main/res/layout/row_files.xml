@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="200dp"-->
+    <!--android:layout_height="300dp"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="250dp"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:id="@+id/imgFiles"-->
+        <!--android:src="@drawable/file_icon_folder" >-->
+    <!--</ImageView>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/txtFileTile"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_gravity="bottom|center"-->
+        <!--android:gravity="center"-->
+        <!--android:text="item1"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="#FF0000"-->
+        <!--android:textSize="20sp" />-->
+
+<!--</FrameLayout>-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/px330"
+    android:id="@+id/fl_main_layout"
+    android:orientation="vertical"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    android:descendantFocusability="afterDescendants"
+    android:layout_height="@dimen/px330">
+
+
+    <LinearLayout
+        android:padding="@dimen/px5"
+        android:gravity="center"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imgFiles"
+            android:layout_marginTop="@dimen/px5"
+            android:layout_width="@dimen/px168"
+            android:layout_height="@dimen/px168" />
+
+        <TextView
+            style="@style/customfontstyle"
+            android:id="@+id/txtFileTile"
+            android:text="Files"
+            android:gravity="center"
+            android:textSize="@dimen/fontsize_40"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textStyle="normal"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_alignParentRight="true"
+        android:id="@+id/cb_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="gone" />
+
+</RelativeLayout>

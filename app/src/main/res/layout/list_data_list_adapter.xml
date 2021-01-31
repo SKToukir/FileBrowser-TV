@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10px"
+    android:gravity="center|left"
+    android:padding="5px"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_margin="5dp"
+        android:id="@+id/leftImageView"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_marginLeft="1dip"
+        android:background="@drawable/ic_playlist_icon" />
+
+    <TextView
+        android:id="@+id/ListNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dip"
+        android:ellipsize="marquee"
+        android:gravity="left"
+        android:text="Test ;dfk;sldkf;sdlfk;sdlfk;slfk"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

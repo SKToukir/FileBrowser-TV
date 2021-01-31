@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="wrap_content"
+
+    android:layout_height="wrap_content"
+
+    android:layout_gravity="center"
+
+    android:background="@drawable/info_bg"
+
+    android:orientation="vertical">
+
+
+    <TextView
+
+        android:id="@+id/play_ab_head_txt"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:gravity="left"
+
+        android:paddingLeft="35dip"
+
+        android:text="@string/a_b_section_repeat"
+
+        android:textColor="@android:color/white"
+
+        android:textSize="16.0dip" />
+
+
+    <LinearLayout
+
+        android:id="@+id/line_layout"
+
+        android:layout_width="fill_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="15dip"
+
+        android:orientation="horizontal"
+
+        android:paddingLeft="10dip">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="45dip"
+
+            android:layout_below="@id/play_ab_head_txt"
+
+            android:gravity="left|center_vertical"
+
+            android:text="@string/section_replay"
+
+            android:textColor="@android:color/white"
+
+            android:textSize="16.0dip" />
+
+
+        <CheckBox
+
+            android:id="@+id/play_on_or_off_checkbox"
+
+            android:layout_width="122dp"
+
+            android:layout_height="match_parent"
+
+            android:layout_marginLeft="40dip"
+
+            android:button="@drawable/checkbox_video_setting_style"
+
+            android:gravity="right" />
+
+    </LinearLayout>
+
+
+    <Button
+
+        android:id="@+id/play_ab_a_btn"
+
+        android:layout_width="fill_parent"
+
+        android:layout_height="50dip"
+
+        android:layout_marginTop="5dip"
+
+        android:background="@drawable/custom_button"
+
+        android:gravity="left|center_vertical"
+
+        android:paddingLeft="10dip"
+
+        android:text="@string/set_begin_a"
+
+        android:textColor="@android:color/white"
+
+        android:textSize="16.0dip" />
+
+
+    <Button
+
+        android:id="@+id/play_ab_b_btn"
+
+        android:layout_width="fill_parent"
+
+        android:layout_height="50dip"
+
+        android:layout_marginTop="5dip"
+
+        android:background="@drawable/custom_button"
+
+        android:gravity="left|center_vertical"
+
+        android:paddingLeft="10dip"
+
+        android:text="@string/set_begin_b"
+
+        android:textColor="@android:color/white"
+
+        android:textSize="16.0dip" />
+
+
+</LinearLayout>

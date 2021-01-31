@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/dialog_background"
+    android:gravity="center|top">
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/video_swdr"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line" />
+
+        <ListView
+            android:layout_marginTop="5dp"
+            android:id="@+id/playsetting_swdr_list"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center|left"
+            android:listSelector="@drawable/music_list_selector" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal">
+
+
+
+            <TextView
+                android:id="@+id/swdr_status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dip"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/video_swdr_status"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dip"
+            android:background="@drawable/line" />
+
+        <!--            <include layout="@layout/bottom">-->
+
+        <!--            </include>-->
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

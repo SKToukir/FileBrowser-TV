@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D81B60</color>
+    <color name="colorPrimaryDark">#D81B60</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_white_30">#2Fffffff</color>
+    <color name="orange">#F4511E</color>
+    <color name="colorFont">#85BCF2</color>
+    <color name="colorBorder">#134B82</color>
+    <color name="colorInter">#091E35</color>
+    <color name="sky_blue">#47D9CC</color>
+    <color name="sky_blue_light">#CAEEEA</color>
+    <color name="white">#FFFFFF</color>
+</resources>

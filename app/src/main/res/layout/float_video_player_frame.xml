@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <TableLayout
+        android:layout_width="600px"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_margin="1dip"
+            android:background="#333333">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="600px"
+                android:layout_height="400px">
+
+
+                <SurfaceView
+                    android:id="@+id/floatVideoPlayView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent" />
+
+                <SurfaceView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_margin="1dip"
+            android:background="#ffffcc">
+
+            <LinearLayout
+                android:layout_width="550px"
+                android:layout_height="56px"
+                android:layout_gravity="bottom|center"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/video_previous"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/float_video_pre"
+                    android:paddingLeft="65dip" />
+
+                <ImageView
+                    android:id="@+id/video_play"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/float_video_play" />
+
+                <ImageView
+                    android:id="@+id/video_next"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/float_video_next" />
+
+                <ImageView
+                    android:id="@+id/video_list"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/float_video_list" />
+
+                <ImageView
+                    android:id="@+id/video_full"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/player_icon_dual_fullscreen" />
+
+                <ImageView
+                    android:id="@+id/video_info"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/float_video_back" />
+
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+</FrameLayout>

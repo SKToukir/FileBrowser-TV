@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:lv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_image"
+    tools:context="com.walton.filebrowser.ui.main.RootActivity">
+
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/txtTitle"
+        style="@style/customfontstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px111"
+        android:layout_marginBottom="@dimen/px30"
+        android:gravity="center"
+        android:text="File Browser"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/fontsize_64"
+        android:textStyle="normal" />
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/straightBarView"
+        style="@style/customfontstyle"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/px1400"
+        android:layout_height="@dimen/px2"
+        android:layout_below="@id/txtTitle"
+        android:background="@drawable/divider"
+        android:padding="@dimen/px10" />
+
+
+    <RelativeLayout
+        android:layout_below="@+id/straightBarView"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+
+        <com.walton.filebrowser.util.GridViewTV
+            android:id="@+id/gridViewUsb"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_alignWithParentIfMissing="true"
+            android:clickable="true"
+            android:layout_centerHorizontal="true"
+            android:columnWidth="@dimen/px300"
+            android:fastScrollEnabled="true"
+            android:gravity="center"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:horizontalSpacing="@dimen/px10"
+            android:numColumns="3"
+            android:paddingTop="@dimen/px30"
+            android:paddingBottom="@dimen/px30"
+            android:saveEnabled="true"
+            android:scrollbars="none"
+            android:smoothScrollbar="true"
+            android:stretchMode="spacingWidthUniform"
+            android:visibility="visible" />
+
+
+<!--        <LinearLayout-->
+<!--            android:visibility="gone"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <View-->
+<!--                android:layout_width="@dimen/px200"-->
+<!--                android:layout_height="match_parent"/>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linear_usb_three"-->
+<!--                android:layout_width="@dimen/px500"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal">-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/px700"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="10dp">-->
+
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/px400">-->
+
+<!--                        &lt;!&ndash;                        <com.walton.filebrowser.util.StorageProgressBar&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:id="@+id/pbarSystem"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:strokeWidth="8dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:progress="0"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:padding="10dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            style="@style/circular_progressbar"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:backgroundColor="@android:color/black"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:progressColor="@android:color/white"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:primaryCapSize="10"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:secodaryCapVisibility="true"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:primaryCapVisibility="true"/>&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                        <ImageButton&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:id="@+id/imgSys"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            style="@style/image_system_device"/>&ndash;&gt;-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <TextView-->
+<!--                            style="@style/txt_storage_name"-->
+<!--                            android:text="System file" />-->
+
+
+<!--                        &lt;!&ndash;                        <com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:id="@+id/progress_bar_sf"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            style="?android:attr/progressBarStyleHorizontal"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:gravity="center|left"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:indeterminate="false"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:maxHeight="12dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:minHeight="12dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:visibility="gone"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:progress="0"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:backgroundColor="#ffffff"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:progressColor="#00C853" />&ndash;&gt;-->
+
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Free Space:"-->
+<!--                                style="@style/txt_storage_space_title" />-->
+
+<!--                            &lt;!&ndash;                            <TextView&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:text=""&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:id="@+id/txtSystemStorageSizeAvilable"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                style="@style/txt_storage_space" />&ndash;&gt;-->
+
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Total Space:"-->
+<!--                                style="@style/txt_storage_space_title" />-->
+
+<!--                            &lt;!&ndash;                            <TextView&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:id="@+id/txtSystemStorageSizeTotal"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                style="@style/txt_storage_space" />&ndash;&gt;-->
+
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/px700"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:clipChildren="false"-->
+<!--                    android:clipToPadding="false"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="10dp">-->
+
+<!--                    &lt;!&ndash;                    <RelativeLayout&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        android:layout_height="match_parent">&ndash;&gt;-->
+
+
+<!--                    &lt;!&ndash;                        <RelativeLayout&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            android:layout_height="match_parent">&ndash;&gt;-->
+
+
+<!--                    <RelativeLayout-->
+<!--                        android:clipChildren="false"-->
+<!--                        android:clipToPadding="false"-->
+<!--                        android:layout_centerHorizontal="true"-->
+<!--                        android:layout_alignParentBottom="true"-->
+<!--                        android:layout_width="@dimen/px326"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        &lt;!&ndash;                                <RelativeLayout&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                    android:layout_height="match_parent">&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                                    <RelativeLayout&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                        android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                        android:layout_height="match_parent">&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                                        <androidx.cardview.widget.CardView&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_margin="15px"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            app:cardCornerRadius="5dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:id="@+id/sysCardSlide"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            app:cardElevation="7dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_height="@dimen/px400">&ndash;&gt;-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:id="@+id/rlSysPocket"-->
+<!--                            android:clipChildren="false"-->
+<!--                            android:clipToPadding="false"-->
+<!--                            android:layout_margin="@dimen/px15"-->
+<!--                            android:background="@drawable/rounded_back"-->
+<!--                            android:gravity="center|top"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="@dimen/px400">-->
+
+<!--                            <RelativeLayout-->
+<!--                                android:layout_marginTop="@dimen/px45"-->
+<!--                                android:gravity="center|top"-->
+<!--                                android:background="@drawable/circle_back_one"-->
+<!--                                android:layout_width="@dimen/px158"-->
+<!--                                android:layout_height="@dimen/px158">-->
+
+<!--                                <ImageView-->
+<!--                                    android:id="@+id/imgSys"-->
+<!--                                    android:scaleType="fitCenter"-->
+<!--                                    android:src="@drawable/system_storage"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="match_parent"/>-->
+
+<!--                            </RelativeLayout>-->
+
+<!--                        </RelativeLayout>-->
+
+<!--                        &lt;!&ndash;                                        </androidx.cardview.widget.CardView>&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                                    </RelativeLayout>&ndash;&gt;-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@drawable/sys_pocket_one"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="@dimen/px300">-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_margin="@dimen/px15"-->
+<!--                                android:gravity="bottom"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent">-->
+
+<!--                                <TextView-->
+<!--                                    style="@style/txt_storage_name"-->
+<!--                                    android:text="System file" />-->
+
+<!--                                <ProgressBar-->
+<!--                                    android:layout_marginBottom="5px"-->
+<!--                                    android:layout_marginTop="5px"-->
+<!--                                    android:progressDrawable="@drawable/progress_bar_horizontal"-->
+<!--                                    style="?android:attr/progressBarStyleHorizontal"-->
+<!--                                    android:id="@+id/pbarSystem"-->
+<!--                                    android:layout_marginRight="@dimen/px20"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="10px"-->
+<!--                                    android:layout_gravity="center|left"/>-->
+
+<!--                                <TextView-->
+<!--                                    android:text=""-->
+<!--                                    android:id="@+id/txtSystemStorageSizeAvilable"-->
+<!--                                    style="@style/txt_storage_space" />-->
+
+<!--                            </LinearLayout>-->
+
+
+<!--                            &lt;!&ndash;                                    </RelativeLayout>&ndash;&gt;-->
+
+<!--                            &lt;!&ndash;                                </RelativeLayout>&ndash;&gt;-->
+
+<!--                        </RelativeLayout>-->
+
+
+
+<!--                    </RelativeLayout>-->
+
+
+<!--                    &lt;!&ndash;                    </RelativeLayout>&ndash;&gt;-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:visibility="gone"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/px400">-->
+
+<!--                        <com.walton.filebrowser.util.StorageProgressBar-->
+
+<!--                            app:strokeWidth="8dp"-->
+<!--                            app:progress="0"-->
+<!--                            android:padding="10dp"-->
+<!--                            style="@style/circular_progressbar"-->
+<!--                            app:backgroundColor="@android:color/black"-->
+<!--                            app:progressColor="@android:color/white"-->
+<!--                            app:primaryCapSize="10"-->
+<!--                            app:secodaryCapVisibility="true"-->
+<!--                            app:primaryCapVisibility="true"/>-->
+
+<!--                        &lt;!&ndash;                        <ImageButton&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:id="@+id/imgSys"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            style="@style/image_system_device"/>&ndash;&gt;-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:visibility="gone"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+
+
+
+<!--                        <com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar-->
+<!--                            android:id="@+id/progress_bar_sf"-->
+<!--                            style="?android:attr/progressBarStyleHorizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:gravity="center|left"-->
+<!--                            android:indeterminate="false"-->
+<!--                            android:maxHeight="12dp"-->
+<!--                            android:minHeight="12dp"-->
+<!--                            android:visibility="gone"-->
+<!--                            android:progress="0"-->
+<!--                            app:backgroundColor="#ffffff"-->
+<!--                            app:progressColor="#00C853" />-->
+
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Free Space:"-->
+<!--                                style="@style/txt_storage_space_title" />-->
+
+
+
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Total Space:"-->
+<!--                                style="@style/txt_storage_space_title" />-->
+<!--                            &lt;!&ndash;                            android:id="@+id/txtSystemStorageSizeTotal"&ndash;&gt;-->
+<!--                            <TextView-->
+
+<!--                                style="@style/txt_storage_space" />-->
+
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linear_usb_one"-->
+<!--                android:layout_width="@dimen/px500"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/px700"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="10dp">-->
+
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/px400">-->
+
+<!--                        <com.walton.filebrowser.util.StorageProgressBar-->
+
+<!--                            app:strokeWidth="8dp"-->
+<!--                            app:progress="0"-->
+<!--                            android:padding="10dp"-->
+<!--                            style="@style/circular_progressbar"-->
+<!--                            app:backgroundColor="@android:color/black"-->
+<!--                            app:progressColor="@android:color/white"-->
+<!--                            app:primaryCapSize="10"-->
+<!--                            app:secodaryCapVisibility="true"-->
+<!--                            app:primaryCapVisibility="true"/>-->
+
+<!--                        <ImageButton-->
+
+<!--                            style="@style/image_usbtwo_device"/>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <TextView-->
+
+<!--                            style="@style/txt_storage_name"/>-->
+
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Free Space:"-->
+<!--                                style="@style/txt_storage_space_title" />-->
+
+<!--                            <TextView-->
+<!--                                android:text=""-->
+
+<!--                                style="@style/txt_storage_space" />-->
+
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Total Space:"-->
+<!--                                style="@style/txt_storage_space_title" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtUsbOneTotalSpace"-->
+<!--                                style="@style/txt_storage_space" />-->
+
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/px700"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:clipChildren="false"-->
+<!--                    android:clipToPadding="false"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="10dp">-->
+
+<!--                    &lt;!&ndash;                    <RelativeLayout&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        android:layout_height="match_parent">&ndash;&gt;-->
+
+
+<!--                    &lt;!&ndash;                        <RelativeLayout&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            android:layout_height="match_parent">&ndash;&gt;-->
+
+
+<!--                    <RelativeLayout-->
+<!--                        android:clipChildren="false"-->
+<!--                        android:clipToPadding="false"-->
+<!--                        android:layout_centerHorizontal="true"-->
+<!--                        android:layout_alignParentBottom="true"-->
+<!--                        android:layout_width="@dimen/px326"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        &lt;!&ndash;                                <RelativeLayout&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                    android:layout_height="match_parent">&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                                    <RelativeLayout&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                        android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                        android:layout_height="match_parent">&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                                        <androidx.cardview.widget.CardView&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_margin="15px"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            app:cardCornerRadius="5dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:id="@+id/sysCardSlide"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            app:cardElevation="7dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_height="@dimen/px400">&ndash;&gt;-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:id="@+id/rlUsbOne"-->
+<!--                            android:clipChildren="false"-->
+<!--                            android:clipToPadding="false"-->
+<!--                            android:layout_margin="@dimen/px15"-->
+<!--                            android:background="@drawable/rounded_back"-->
+<!--                            android:gravity="center|top"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="@dimen/px400">-->
+
+<!--                            <RelativeLayout-->
+<!--                                android:layout_marginTop="@dimen/px45"-->
+<!--                                android:gravity="center|top"-->
+<!--                                android:background="@drawable/circle_back_one"-->
+<!--                                android:layout_width="@dimen/px158"-->
+<!--                                android:layout_height="@dimen/px158">-->
+
+<!--                                <ImageView-->
+<!--                                    android:id="@+id/imgUsbOne"-->
+<!--                                    android:scaleType="fitCenter"-->
+<!--                                    android:src="@drawable/usb"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="match_parent"/>-->
+
+<!--                            </RelativeLayout>-->
+
+<!--                        </RelativeLayout>-->
+
+<!--                        &lt;!&ndash;                                        </androidx.cardview.widget.CardView>&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                                    </RelativeLayout>&ndash;&gt;-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@drawable/sys_pocket_one"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="@dimen/px300">-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_margin="@dimen/px15"-->
+<!--                                android:gravity="bottom"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent">-->
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/txtUsbOneStorageSpace"-->
+<!--                                    style="@style/txt_storage_name"-->
+<!--                                    android:text="System file" />-->
+
+<!--                                <ProgressBar-->
+<!--                                    android:layout_marginBottom="5px"-->
+<!--                                    android:layout_marginTop="5px"-->
+<!--                                    android:progressDrawable="@drawable/progress_bar_horizontal"-->
+<!--                                    style="?android:attr/progressBarStyleHorizontal"-->
+<!--                                    android:id="@+id/pbarUsbOne"-->
+<!--                                    android:layout_marginRight="@dimen/px20"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="10px"-->
+<!--                                    android:layout_gravity="center|left"/>-->
+
+<!--                                <TextView-->
+<!--                                    android:text=""-->
+<!--                                    android:id="@+id/txtUsbOneFreeSpace"-->
+<!--                                    style="@style/txt_storage_space" />-->
+
+<!--                            </LinearLayout>-->
+
+
+<!--                            &lt;!&ndash;                                    </RelativeLayout>&ndash;&gt;-->
+
+<!--                            &lt;!&ndash;                                </RelativeLayout>&ndash;&gt;-->
+
+<!--                        </RelativeLayout>-->
+
+
+
+<!--                    </RelativeLayout>-->
+
+
+<!--                    &lt;!&ndash;                    </RelativeLayout>&ndash;&gt;-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:visibility="gone"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/px400">-->
+
+<!--                        <com.walton.filebrowser.util.StorageProgressBar-->
+
+<!--                            app:strokeWidth="8dp"-->
+<!--                            app:progress="0"-->
+<!--                            android:padding="10dp"-->
+<!--                            style="@style/circular_progressbar"-->
+<!--                            app:backgroundColor="@android:color/black"-->
+<!--                            app:progressColor="@android:color/white"-->
+<!--                            app:primaryCapSize="10"-->
+<!--                            app:secodaryCapVisibility="true"-->
+<!--                            app:primaryCapVisibility="true"/>-->
+
+<!--                        &lt;!&ndash;                        <ImageButton&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:id="@+id/imgSys"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            style="@style/image_system_device"/>&ndash;&gt;-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:visibility="gone"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+
+
+
+<!--                        &lt;!&ndash;                        <com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:id="@+id/progress_bar_sf"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            style="?android:attr/progressBarStyleHorizontal"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:gravity="center|left"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:indeterminate="false"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:maxHeight="12dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:minHeight="12dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:visibility="gone"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:progress="0"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:backgroundColor="#ffffff"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:progressColor="#00C853" />&ndash;&gt;-->
+
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Free Space:"-->
+<!--                                style="@style/txt_storage_space_title" />-->
+
+
+
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Total Space:"-->
+<!--                                style="@style/txt_storage_space_title" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtSystemStorageSizeTotal"-->
+<!--                                style="@style/txt_storage_space" />-->
+
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linear_usb_two"-->
+<!--                android:layout_width="@dimen/px500"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/px700"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="10dp">-->
+
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/px400">-->
+
+<!--                        <com.walton.filebrowser.util.StorageProgressBar-->
+
+<!--                            app:strokeWidth="8dp"-->
+<!--                            app:progress="0"-->
+<!--                            android:padding="10dp"-->
+<!--                            style="@style/circular_progressbar"-->
+<!--                            app:backgroundColor="@android:color/black"-->
+<!--                            app:progressColor="@android:color/white"-->
+<!--                            app:primaryCapSize="10"-->
+<!--                            app:secodaryCapVisibility="true"-->
+<!--                            app:primaryCapVisibility="true"/>-->
+
+<!--                        <ImageButton-->
+
+<!--                            style="@style/image_usbtwo_device"/>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <TextView-->
+
+<!--                            style="@style/txt_storage_name"/>-->
+
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Free Space:"-->
+<!--                                style="@style/txt_storage_space_title" />-->
+
+<!--                            <TextView-->
+<!--                                android:text=""-->
+
+<!--                                style="@style/txt_storage_space" />-->
+
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Total Space:"-->
+<!--                                style="@style/txt_storage_space_title" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/txtUsbTwoTotalSpace"-->
+<!--                                style="@style/txt_storage_space" />-->
+
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/px700"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:clipChildren="false"-->
+<!--                    android:clipToPadding="false"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="10dp">-->
+
+<!--                    &lt;!&ndash;                    <RelativeLayout&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        android:layout_height="match_parent">&ndash;&gt;-->
+
+
+<!--                    &lt;!&ndash;                        <RelativeLayout&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            android:layout_height="match_parent">&ndash;&gt;-->
+
+
+<!--                    <RelativeLayout-->
+<!--                        android:clipChildren="false"-->
+<!--                        android:clipToPadding="false"-->
+<!--                        android:layout_centerHorizontal="true"-->
+<!--                        android:layout_alignParentBottom="true"-->
+<!--                        android:layout_width="@dimen/px326"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        &lt;!&ndash;                                <RelativeLayout&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                    android:layout_height="match_parent">&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                                    <RelativeLayout&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                        android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                        android:layout_height="match_parent">&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                                        <androidx.cardview.widget.CardView&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_margin="15px"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            app:cardCornerRadius="5dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:id="@+id/sysCardSlide"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            app:cardElevation="7dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                                            android:layout_height="@dimen/px400">&ndash;&gt;-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:id="@+id/rlUsbTwo"-->
+<!--                            android:clipChildren="false"-->
+<!--                            android:clipToPadding="false"-->
+<!--                            android:layout_margin="@dimen/px15"-->
+<!--                            android:background="@drawable/rounded_back"-->
+<!--                            android:gravity="center|top"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="@dimen/px400">-->
+
+<!--                            <RelativeLayout-->
+<!--                                android:layout_marginTop="@dimen/px45"-->
+<!--                                android:gravity="center|top"-->
+<!--                                android:background="@drawable/circle_back_one"-->
+<!--                                android:layout_width="@dimen/px158"-->
+<!--                                android:layout_height="@dimen/px158">-->
+
+<!--                                <ImageView-->
+<!--                                    android:id="@+id/imgUsbTwo"-->
+<!--                                    android:scaleType="fitCenter"-->
+<!--                                    android:src="@drawable/usb"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="match_parent"/>-->
+
+<!--                            </RelativeLayout>-->
+
+<!--                        </RelativeLayout>-->
+
+<!--                        &lt;!&ndash;                                        </androidx.cardview.widget.CardView>&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                                    </RelativeLayout>&ndash;&gt;-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@drawable/sys_pocket_one"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="@dimen/px300">-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_margin="@dimen/px15"-->
+<!--                                android:gravity="bottom"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent">-->
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/txtUsbTwoStorageSpace"-->
+<!--                                    style="@style/txt_storage_name"-->
+<!--                                    android:text="System file" />-->
+
+<!--                                <ProgressBar-->
+<!--                                    android:layout_marginBottom="5px"-->
+<!--                                    android:layout_marginTop="5px"-->
+<!--                                    android:progressDrawable="@drawable/progress_bar_horizontal"-->
+<!--                                    style="?android:attr/progressBarStyleHorizontal"-->
+<!--                                    android:id="@+id/pbarUsbTwo"-->
+<!--                                    android:layout_marginRight="@dimen/px20"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="10px"-->
+<!--                                    android:layout_gravity="center|left"/>-->
+
+<!--                                <TextView-->
+<!--                                    android:text=""-->
+<!--                                    android:id="@+id/txtUsbTwoFreeSpace"-->
+<!--                                    style="@style/txt_storage_space" />-->
+
+<!--                            </LinearLayout>-->
+
+
+<!--                            &lt;!&ndash;                                    </RelativeLayout>&ndash;&gt;-->
+
+<!--                            &lt;!&ndash;                                </RelativeLayout>&ndash;&gt;-->
+
+<!--                        </RelativeLayout>-->
+
+
+
+<!--                    </RelativeLayout>-->
+
+
+<!--                    &lt;!&ndash;                    </RelativeLayout>&ndash;&gt;-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:visibility="gone"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/px400">-->
+
+<!--                        <com.walton.filebrowser.util.StorageProgressBar-->
+
+<!--                            app:strokeWidth="8dp"-->
+<!--                            app:progress="0"-->
+<!--                            android:padding="10dp"-->
+<!--                            style="@style/circular_progressbar"-->
+<!--                            app:backgroundColor="@android:color/black"-->
+<!--                            app:progressColor="@android:color/white"-->
+<!--                            app:primaryCapSize="10"-->
+<!--                            app:secodaryCapVisibility="true"-->
+<!--                            app:primaryCapVisibility="true"/>-->
+
+<!--                        &lt;!&ndash;                        <ImageButton&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:id="@+id/imgSys"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            style="@style/image_system_device"/>&ndash;&gt;-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:visibility="gone"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+
+
+
+<!--                        &lt;!&ndash;                        <com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:id="@+id/progress_bar_sf"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            style="?android:attr/progressBarStyleHorizontal"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:gravity="center|left"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:indeterminate="false"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:maxHeight="12dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:minHeight="12dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:visibility="gone"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            android:progress="0"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:backgroundColor="#ffffff"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            app:progressColor="#00C853" />&ndash;&gt;-->
+
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Free Space:"-->
+<!--                                style="@style/txt_storage_space_title" />-->
+
+
+
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:text="Total Space:"-->
+<!--                                style="@style/txt_storage_space_title" />-->
+
+<!--                            &lt;!&ndash;                            <TextView&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                android:id="@+id/txtSystemStorageSizeTotal"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                style="@style/txt_storage_space" />&ndash;&gt;-->
+
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+
+<!--            <View-->
+<!--                android:layout_width="@dimen/px200"-->
+<!--                android:layout_height="match_parent"/>-->
+
+
+<!--        </LinearLayout>-->
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.open.androidtvwidget.view.MainUpView
+
+        android:id="@+id/mainUpView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- <com.victor.loading.rotate.RotateLoading
+         android:id="@+id/rotateloading"
+         android:layout_width="@dimen/px160"
+         android:layout_height="@dimen/px160"
+         android:layout_centerInParent="true"
+         app:loading_speed="400"
+         app:loading_width="5dp" />-->
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorName="LineSpinFadeLoaderIndicator"
+        />
+
+
+</RelativeLayout>

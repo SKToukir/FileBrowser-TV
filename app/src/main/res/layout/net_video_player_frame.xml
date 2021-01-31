@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <!-- 视频播放view -->
+
+    <com.walton.filebrowser.business.video.VideoPlayView
+        android:id="@+id/netVideoPlayerSurfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent" />
+
+    <!-- 文本字幕view -->
+
+    <com.walton.filebrowser.ui.video.BorderTextViews
+        android:id="@+id/net_video_player_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="3dip"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip"
+        android:textColor="@android:color/white"
+        android:textSize="35sp" />
+
+    <!-- 视频控制条bar -->
+    <LinearLayout
+        android:id="@+id/musiclayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/back_image"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/net_video_suspension_layout"
+        android:layout_width="828dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/player_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="800dip"
+            android:layout_height="45dip"
+            android:layout_weight="12"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip">
+
+            <com.walton.filebrowser.ui.view.MarqueeTextView
+                android:id="@+id/net_video_name_display"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="10"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingTop="10dip"
+                android:singleLine="true"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/net_video_play_speed_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="10dip"
+                android:text="@string/one_times_speed"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="42dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:paddingTop="2dip">
+
+            <ImageView
+                android:id="@+id/video_previous"
+                android:layout_width="55dip"
+                android:layout_height="42dip"
+                android:layout_weight="1"
+                android:background="@drawable/player_icon_previous"
+                android:paddingLeft="65dip" />
+
+            <ImageView
+                android:id="@+id/net_video_rewind"
+                android:layout_width="55dip"
+                android:layout_height="42dip"
+                android:layout_weight="1"
+                android:background="@drawable/player_icon_rewind" />
+
+            <ImageView
+                android:id="@+id/net_video_play"
+                android:layout_width="55dip"
+                android:layout_height="42dip"
+                android:layout_weight="1"
+                android:background="@drawable/player_icon_pause" />
+
+            <ImageView
+                android:id="@+id/net_video_wind"
+                android:layout_width="55dip"
+                android:layout_height="42dip"
+                android:layout_weight="1"
+                android:background="@drawable/player_icon_wind" />
+
+            <ImageView
+                android:id="@+id/video_next"
+                android:layout_width="55dip"
+                android:layout_height="42dip"
+                android:layout_weight="1"
+                android:background="@drawable/player_icon_next" />
+
+            <ImageView
+                android:id="@+id/net_video_time"
+                android:layout_width="55dip"
+                android:layout_height="42dip"
+                android:layout_weight="1"
+                android:background="@drawable/player_icon_time" />
+
+            <ImageView
+                android:id="@+id/net_video_list"
+                android:layout_width="55dip"
+                android:layout_height="42dip"
+                android:layout_weight="1"
+                android:background="@drawable/player_icon_list" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="800dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_weight="14"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="2dip">
+
+            <TextView
+                android:id="@+id/net_control_timer_current"
+                android:layout_width="70dip"
+                android:layout_height="wrap_content"
+                android:text="@string/default_time"
+                android:textSize="12.0dip" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <SeekBar
+                    android:id="@+id/net_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="533dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dip"
+                    android:focusable="false"
+                    android:maxHeight="12dip"
+                    android:minHeight="12dip"
+                    android:paddingLeft="7dip"
+                    android:paddingRight="8dip"
+                    android:thumb="@drawable/thumbs" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/net_control_timer_total"
+                android:layout_width="70dip"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/default_time"
+                android:textSize="12.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

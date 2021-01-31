@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 视频播放设置 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/px600"
+    android:layout_height="75dip"
+    android:gravity="center_vertical"
+    android:padding="10px"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/settingNameTextView"
+        android:layout_width="140dip"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/leftImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dip"
+        android:layout_marginLeft="7dip"
+        android:src="@drawable/left" />
+
+    <TextView
+        android:id="@+id/settingOptionTextView"
+        android:layout_width="65dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dip"
+        android:ellipsize="marquee"
+        android:gravity="center_horizontal"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="#b2b2b2"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/rightImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dip"
+        android:src="@drawable/right" />
+
+</LinearLayout>

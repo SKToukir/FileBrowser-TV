@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <com.walton.filebrowser.ui.media.view.ReflectItemView
+        android:id="@+id/reflect_layout"
+        android:layout_width="250dp"
+        android:layout_height="300dp">
+
+        <ImageView
+            android:id="@+id/iv_device_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_device_name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textColor="@android:color/background_light"
+            android:textSize="28sp" />
+
+    </com.walton.filebrowser.ui.media.view.ReflectItemView>
+
+</FrameLayout>

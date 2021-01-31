@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_image"
+    android:orientation="vertical"
+    tools:context=".FocusTest">
+
+    <com.open.androidtvwidget.view.MainUpView
+        android:id="@+id/mainUpView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.open.androidtvwidget.view.MainUpView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px180"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:fontFamily="@font/custom_text"
+                android:text="File Browser"
+                android:textColor="#fff"
+                android:textSize="@dimen/fontsize_42" />
+
+            <RelativeLayout style="@style/usb_device_holder">
+
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/layoutSystemStorage"
+                    style="@style/storage_layout">
+
+                    <RelativeLayout
+                        android:padding="5dp"
+                        style="@style/storage_circular_image_holder">
+
+                        <ImageButton style="@style/image_system_device_mini" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout style="@style/layout_space">
+
+                        <TextView
+                            android:id="@+id/txtUsbNameNew"
+                            style="@style/textview_device_name"
+                            android:text="Local storage" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:text="All"
+                                android:fontFamily="@font/custom_text"
+                                android:id="@+id/txtSelectedCategory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#D2FFFFFF"
+                                android:textSize="@dimen/fontsize_30"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:gravity="center"
+                                android:textSize="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:textStyle="bold"
+                                android:textColor="#fff"
+                                android:text=" | "
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"/>
+
+                            <com.walton.filebrowser.ui.view.MarqueeTextView
+                                android:id="@+id/txtFilePath"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="left|center"
+                                android:text=""
+                                android:fontFamily="@font/custom_text"
+                                android:textColor="#E2FFFFFF"
+                                android:singleLine="true"
+                                android:textSize="@dimen/fontsize_28"
+                                android:visibility="visible" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txtSysFreeSpace"
+                            style="@style/textView_space_count"
+                            android:text="Free Space: 1GB" />
+
+                        <ProgressBar
+                            android:visibility="gone"
+                            android:id="@+id/pbarHome"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/px250"
+                            android:layout_height="10px"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="5px"
+                            android:layout_marginRight="@dimen/px20"
+                            android:layout_marginBottom="5px" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="30sp" />
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <RelativeLayout
+                android:background="@drawable/foucu_one"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="6.5"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    android:paddingRight="@dimen/px20"
+                    android:weightSum="7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtCircularViewOne"
+                        android:textSize="16sp"
+                        android:alpha="0.2"
+                        android:layout_weight="1"
+                        android:layout_marginRight="130px"
+                        style="@style/circular_item"
+                        android:text="Docs" />
+
+
+                    <TextView
+                        android:id="@+id/txtCircularViewTwo"
+                        android:textSize="18sp"
+                        android:alpha="0.4"
+                        android:layout_weight="1"
+                        android:layout_marginRight="80px"
+                        style="@style/circular_item"
+                        android:text="Apps" />
+
+
+                    <TextView
+                        android:id="@+id/txtCircularViewThree"
+                        android:textSize="20sp"
+                        android:alpha="0.5"
+                        android:layout_weight="1"
+                        android:layout_marginRight="30px"
+                        style="@style/circular_item"
+                        android:text="Zip" />
+
+
+                    <!--center view-->
+                    <TextView
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+                        android:id="@+id/txtCircularViewFour"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/fontsize_40"
+                        android:layout_weight="1"
+                        android:alpha="0.5"
+                        android:elevation="10dp"
+                        android:shadowColor="#fff"
+                        style="@style/circular_item"
+                        android:text="All" />
+
+
+                    <TextView
+                        android:id="@+id/txtCircularViewFive"
+                        android:textSize="20sp"
+                        android:alpha="0.5"
+                        android:layout_weight="1"
+                        android:layout_marginRight="30px"
+                        style="@style/circular_item"
+                        android:text="Photos" />
+
+
+                    <TextView
+                        android:id="@+id/txtCircularViewSix"
+                        android:textSize="18sp"
+                        android:alpha="0.4"
+                        android:layout_weight="1"
+                        android:layout_marginRight="80px"
+                        style="@style/circular_item"
+                        android:text="Videos" />
+
+
+                    <TextView
+                        android:id="@+id/txtCircularViewSeven"
+                        android:textSize="16sp"
+                        android:alpha="0.2"
+                        android:layout_weight="1"
+                        android:layout_marginRight="130px"
+                        style="@style/circular_item"
+                        android:text="Audio" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+
+
+                <include
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    layout="@layout/empty_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.walton.filebrowser.util.GridViewTV
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:columnWidth="@dimen/px300"
+                    android:fastScrollEnabled="true"
+                    android:gravity="center"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:horizontalSpacing="2dp"
+                    android:nextFocusRight="@id/gridView"
+                    android:nextFocusDown="@id/gridView"
+                    android:numColumns="4"
+                    android:paddingStart="75dp"
+                    android:paddingLeft="75dp"
+                    android:paddingTop="@dimen/px30"
+                    android:paddingBottom="@dimen/px30"
+                    android:saveEnabled="true"
+                    android:scrollbars="horizontal"
+                    android:smoothScrollbar="true"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="@dimen/px30"
+                    android:visibility="visible"
+                    android:focusable="true" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_weight="6.5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#86000000"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <!--android:background="@android:color/transparent"-->
+
+        <ListView
+            android:visibility="visible"
+            android:id="@+id/lv_menu"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/dialog_bg"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="@dimen/px15"
+            android:listSelector="@drawable/cursor_shadow" />
+
+        <TextView
+            android:id="@+id/txtUsbName"
+            style="@style/customfontstyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px30"
+            android:gravity="center"
+            android:text="USB"
+            android:textColor="#B9D8FA"
+            android:textSize="@dimen/px50"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+
+</RelativeLayout>

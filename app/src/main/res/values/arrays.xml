@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="audio_filter">
+        <item>.mp3</item>
+        <item>.wma</item>
+        <item>.aac</item>
+        <item>.ogg</item>
+        <item>.pcm</item>
+        <item>.m4a</item>
+        <item>.ac3</item>
+        <item>.ec3</item>
+        <item>.dtshd</item>
+        <item>.ra</item>
+        <item>.wav</item>
+        <item>.cd</item>
+        <item>.amr</item>
+        <item>.mp2</item>
+        <item>.ape</item>
+        <item>.dts</item>
+        <item>.flac</item>
+        <item>.midi</item>
+        <item>.mid</item>
+        <item>.mlp</item>
+        <item>.vr</item>
+    </string-array>
+    <string-array name="video_filter">
+        <item>.avi</item>
+        <item>.asf</item>
+        <item>.wmv</item>
+        <item>.m2t</item>
+        <item>.mts</item>
+        <item>.ts</item>
+        <item>.mpg</item>
+        <item>.m2p</item>
+        <item>.mp4</item>
+        <item>.flv</item>
+        <item>.swf</item>
+        <item>.vob</item>
+        <item>.mkv</item>
+        <item>.divx</item>
+        <item>.xvid</item>
+        <item>.mov</item>
+        <item>.rmvb</item>
+        <item>.rv</item>
+        <item>.3gp</item>
+        <item>.3g2</item>
+        <item>.dat</item>
+        <item>.pmp</item>
+        <item>.tp</item>
+        <item>.trp</item>
+        <item>.rm</item>
+        <item>.webm</item>
+        <item>.m2ts</item>
+        <item>.ssif</item>
+        <item>.mpeg</item>
+        <item>.mpe</item>
+        <item>.m3u8</item>
+        <item>.iso</item>
+        <item>.bdmv</item>
+        <item>.m4v</item>
+        <item>.m2v</item>
+        <item>.mka</item>
+    </string-array>
+    <string-array name="mwvideo_filter">
+        <item>.avi</item>
+        <item>.asf</item>
+        <item>.wmv</item>
+        <item>.m2t</item>
+        <item>.mts</item>
+        <item>.ts</item>
+        <item>.mpg</item>
+        <item>.m2p</item>
+        <item>.mp4</item>
+        <item>.flv</item>
+        <item>.swf</item>
+        <item>.vob</item>
+        <item>.mkv</item>
+        <item>.divx</item>
+        <item>.xvid</item>
+        <item>.mov</item>
+        <item>.rmvb</item>
+        <item>.rv</item>
+        <item>.3gp</item>
+        <item>.3g2</item>
+        <item>.dat</item>
+        <item>.pmp</item>
+        <item>.tp</item>
+        <item>.trp</item>
+        <item>.rm</item>
+        <item>.webm</item>
+        <item>.m2ts</item>
+        <item>.ssif</item>
+        <item>.mpeg</item>
+        <item>.mpe</item>
+        <item>.m3u8</item>
+        <item>.iso</item>
+        <item>.bdmv</item>
+        <item>.m4v</item>
+        <item>.m2v</item>
+        <item>.mka</item>
+        <item>.mplt</item>
+    </string-array>
+    <string-array name="photo_filter">
+        <item>.jpg</item>
+        <item>.jpeg</item>
+        <item>.png</item>
+        <item>.bmp</item>
+        <item>.gif</item>
+        <item>.tiff</item>
+        <!--  <item>.tif</item> -->
+        <!--   <item>.pcx</item> -->
+        <item>.tga</item>
+        <item>.exif</item>
+        <item>.fpx</item>
+        <item>.svg</item>
+        <item>.psd</item>
+        <item>.cdr</item>
+        <item>.pcd</item>
+        <item>.dxf</item>
+        <item>.ufo</item>
+        <item>.eps</item>
+        <item>.raw</item>
+        <item>.mpo</item>
+        <!-- <item>tif</item>> -->
+    </string-array>
+    <string-array name="playlist_filter">
+        <item>.mplt</item>
+        <item>.mstarplaylist</item>
+    </string-array>
+
+    <string-array name="video_rotate_degrees">
+        <item>0</item>
+        <item>90</item>
+        <item>180</item>
+        <item>270</item>
+    </string-array>
+
+    <string-array name="show_method">
+        <item>List</item>
+        <item>Thumbnails</item>
+    </string-array>
+
+    <string-array name="sort_method">
+        <item>Name</item>
+        <item>Size</item>
+        <item>ModifyTime</item>
+    </string-array>
+
+    <string-array name="mountType">
+        <item>USB</item>
+        <item>SATA</item>
+        <item>CARD</item>
+        <item>UNKOWN</item>
+    </string-array>
+
+</resources>

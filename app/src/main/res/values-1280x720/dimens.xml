@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="px2">1.33px</dimen>
+    <dimen name="px4">2.66px</dimen>
+    <dimen name="px5">3.33px</dimen>
+    <dimen name="px8">5.33px</dimen>
+    <dimen name="px10">6.66px</dimen>
+    <dimen name="px15">10.0px</dimen>
+    <dimen name="px16">10.66px</dimen>
+    <dimen name="px20">13.33px</dimen>
+    <dimen name="px30">20.0px</dimen>
+    <dimen name="px45">30.0px</dimen>
+    <dimen name="px50">33.33px</dimen>
+    <dimen name="px60">40.0px</dimen>
+    <dimen name="px100">66.66px</dimen>
+    <dimen name="px111">74.0px</dimen>
+    <dimen name="px150">100.0px</dimen>
+    <dimen name="px158">105.33px</dimen>
+    <dimen name="px160">106.66px</dimen>
+    <dimen name="px168">112.0px</dimen>
+    <dimen name="px170">113.33px</dimen>
+    <dimen name="px171">114.0px</dimen>
+    <dimen name="px180">120.0px</dimen>
+    <dimen name="px200">133.33px</dimen>
+    <dimen name="px250">166.66px</dimen>
+    <dimen name="px277">184.66px</dimen>
+    <dimen name="px300">200.0px</dimen>
+    <dimen name="px326">217.33px</dimen>
+    <dimen name="px330">220.0px</dimen>
+    <dimen name="px350">233.33px</dimen>
+    <dimen name="px400">266.66px</dimen>
+    <dimen name="px466">310.66px</dimen>
+    <dimen name="px500">333.33px</dimen>
+    <dimen name="px600">400.0px</dimen>
+    <dimen name="px700">466.66px</dimen>
+    <dimen name="px960">640.0px</dimen>
+    <dimen name="px1400">933.33px</dimen>
+    <dimen name="fontsize_18">12.0px</dimen>
+    <dimen name="fontsize_20">13.33px</dimen>
+    <dimen name="fontsize_28">18.66px</dimen>
+    <dimen name="fontsize_30">20.0px</dimen>
+    <dimen name="fontsize_40">26.66px</dimen>
+    <dimen name="fontsize_42">28.0px</dimen>
+    <dimen name="fontsize_64">42.66px</dimen>
+
+
+</resources>

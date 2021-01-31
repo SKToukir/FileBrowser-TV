@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/back_image"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+
+                <com.walton.filebrowser.business.video.MultiVideoPlayView
+                    android:id="@+id/videoview1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:id="@+id/imageview1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/add_video" />
+
+                <TextView
+                    android:id="@+id/videofocus1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                    android:text="@string/video"
+                    android:textColor="@android:color/transparent" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+
+                <com.walton.filebrowser.business.video.MultiVideoPlayView
+                    android:id="@+id/videoview2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:id="@+id/imageview2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/add_video" />
+
+                <TextView
+                    android:id="@+id/videofocus2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                    android:text="@string/video"
+                    android:textColor="@android:color/transparent" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+
+                <com.walton.filebrowser.business.video.MultiVideoPlayView
+                    android:id="@+id/videoview3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:id="@+id/imageview3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/add_video" />
+
+                <TextView
+                    android:id="@+id/videofocus3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                    android:text="@string/video"
+                    android:textColor="@android:color/transparent" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+
+                <com.walton.filebrowser.business.video.MultiVideoPlayView
+                    android:id="@+id/videoview4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:id="@+id/imageview4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/add_video" />
+
+                <TextView
+                    android:id="@+id/videofocus4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                    android:text="@string/video"
+                    android:textColor="@android:color/transparent" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

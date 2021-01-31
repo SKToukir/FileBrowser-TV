@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_main_layout"
+    android:layout_width="@dimen/px170"
+    android:layout_height="@dimen/px180"
+    android:layout_margin="5dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="@drawable/selector_grid_view_bg"
+    android:padding="18px"
+    android:orientation="vertical">
+
+<!--    <com.open.androidtvwidget.view.MainUpView-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/mainUpViewSubList"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content" />-->
+
+    <androidx.cardview.widget.CardView
+        android:padding="5dp"
+        android:layout_width="@dimen/px160"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imgMusic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txtMusicItem"
+                android:layout_width="match_parent"
+                android:layout_height="30px"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:background="#AE000000"
+                android:ellipsize="marquee"
+                android:gravity="center|left"
+                android:padding="5px"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#fff"
+                android:textSize="@dimen/fontsize_18"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+
+                <com.walton.filebrowser.ui.music.EqualizerView
+                    android:id="@+id/eq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#DF000000"
+                    android:visibility="gone"
+                    app:animDuration="3000" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

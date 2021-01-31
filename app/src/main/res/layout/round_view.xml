@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="500dip"
+
+    android:layout_height="500dip"
+
+    android:layout_gravity="center"
+
+    android:gravity="center"
+
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+
+        android:id="@+id/menuBgRelativeLayout"
+
+        android:layout_width="500dip"
+
+        android:layout_height="500dip"
+
+        android:background="@drawable/menu_bg">
+
+
+        <!-- 焦点按钮 -->
+
+
+        <ImageView
+
+            android:id="@+id/menuFocusImage"
+
+            android:layout_width="170dip"
+
+            android:layout_height="170dip"
+
+            android:layout_centerHorizontal="true"
+
+            android:layout_centerVertical="true"
+
+            android:src="@drawable/menu_focus" />
+
+
+        <!-- 上方的控件 -->
+
+
+        <ImageView
+
+            android:id="@+id/upImage"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginTop="45dip"
+
+            android:src="@drawable/common_img_arrow_u" />
+
+
+        <TextView
+
+            android:id="@+id/upText"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/upImage"
+
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginTop="2dip"
+
+            android:text="@string/display_pip" />
+
+
+        <!-- 左边的控件 -->
+
+
+        <ImageView
+
+            android:id="@+id/leftImage"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+
+            android:layout_marginLeft="45dip"
+
+            android:src="@drawable/common_img_arrow_l" />
+
+
+        <TextView
+
+            android:id="@+id/leftText"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+
+            android:layout_marginLeft="5dip"
+
+            android:layout_toRightOf="@id/leftImage"
+
+            android:text="@string/pre_channel" />
+
+
+        <!-- 右边的控件 -->
+
+
+        <TextView
+
+            android:id="@+id/rightText"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+
+            android:layout_marginLeft="370dip"
+
+            android:text="@string/next_channel" />
+
+
+        <ImageView
+
+            android:id="@+id/rightImage"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+
+            android:layout_marginLeft="2dip"
+
+            android:layout_toRightOf="@id/rightText"
+
+            android:src="@drawable/common_img_arrow_r" />
+
+
+        <!-- 下方的控件 -->
+
+
+        <TextView
+
+            android:id="@+id/downText"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/menuFocusImage"
+
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginTop="85dip"
+
+            android:text="@string/hide_pip" />
+
+
+        <ImageView
+
+            android:id="@+id/downImage"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/downText"
+
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginTop="2dip"
+
+            android:src="@drawable/common_img_arrow_d" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

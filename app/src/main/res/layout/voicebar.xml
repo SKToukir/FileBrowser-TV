@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voicebarlayout"
+    android:layout_width="wrap_content"
+    android:layout_height="190dip"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <com.walton.filebrowser.util.VerticalSeekBar
+        android:id="@+id/voicebar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="30dip"
+        android:layout_height="150dip"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:maxHeight="1dip"
+        android:minHeight="1dip"
+        android:progressDrawable="@android:color/transparent"
+        android:thumb="@android:color/transparent" />
+
+</LinearLayout>

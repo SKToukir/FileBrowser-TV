@@ -1,0 +1,228 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->=
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+
+
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="android:windowIsTranslucent">true</item>-->
+    <!--<item name="android:windowNoTitle">true</item>-->
+    <!--<item name="android:windowActionBar">false</item>-->
+    <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+    <!--</style>-->
+
+    <style name="CustomProgressDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/orange</item>
+    </style>
+
+    <style name="circular_item">
+        <item name="fontFamily">@font/custom_text</item>
+        <item name="android:weightSum">1</item>
+        <item name="android:gravity">center|right</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item> <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item> <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item> <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:backgroundDimEnabled">false</item> <!-- 模糊 -->
+    </style>
+
+    <style name="choose_time_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item> <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item> <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item> <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:backgroundDimEnabled">false</item> <!-- 模糊 -->
+    </style>
+
+    <style name="progress_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--背景透明   去掉背景色边框也就去掉了 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+        <!-- <item name="android:windowContentOverlay">@null</item> -->
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="NumberProgressBar_Default">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="progress_current">0</item>
+        <item name="progress_unreached_color">#CCCCCC</item>
+        <item name="progress_reached_color">#3498DB</item>
+        <item name="progress_text_size">22sp</item>
+        <item name="progress_text_color">#3498DB</item>
+        <item name="progress_reached_bar_height">6.5dp</item>
+        <item name="progress_unreached_bar_height">5.75dp</item>
+    </style>
+
+    <style name="txt_storage_name">
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/fontsize_28</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+    <style name="txt_storage_space_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/fontsize_30</item>
+        <item name="android:gravity">center|right</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+
+    <style name="txt_storage_space">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/fontsize_20</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+
+    <style name="customfontstyle" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/custom_text</item>
+    </style>
+
+    <style name="storage_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    
+    <style name="circular_progressbar">
+        <item name="android:layout_width">@dimen/px350</item>
+        <item name="android:layout_height">@dimen/px350</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+
+    <style name="storage_circular_image_holder">
+        <item name="android:layout_width">@dimen/px300</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clipChildren">false</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
+
+    <style name="usb_device_holder">
+        <item name="android:gravity">center|left</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+
+    <style name="image_system_device">
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:background">@drawable/storage</item>
+        <item name="android:layout_width">@dimen/px150</item>
+        <item name="android:layout_height">@dimen/px200</item>
+    </style>
+
+    <style name="image_usbtwo_device">
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:background">@drawable/usbs</item>
+        <item name="android:layout_width">@dimen/px150</item>
+        <item name="android:layout_height">@dimen/px200</item>
+    </style>
+
+      <style name="image_system_device_mini">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:background">@drawable/usb</item>
+        <item name="android:layout_width">@dimen/px277</item>
+        <item name="android:layout_height">@dimen/px171</item>
+    </style>
+
+
+    <style name="layout_space">
+        <item name="android:gravity">left|center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+
+    <style name="controller_image">
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_height">55dp</item>
+    </style>
+
+
+    <style name="textview_device_name">
+        <item name="fontFamily">@font/custom_text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">@dimen/fontsize_28</item>
+    </style>
+
+
+    <style name="textView_space_count">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">@dimen/fontsize_18</item>
+    </style>
+
+    <style name="ACPLDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="NonDimACProgressDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>

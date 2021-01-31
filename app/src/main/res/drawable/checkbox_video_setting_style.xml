@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:drawable="@drawable/checkbox_open_eng" android:state_checked="true"/>
+
+    <!-- default -->
+
+    <item android:drawable="@drawable/checkbox_close_eng" android:state_checked="false"/>
+
+
+
+</selector>

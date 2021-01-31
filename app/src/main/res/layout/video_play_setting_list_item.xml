@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 视频播放设置 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="75dip"
+    android:padding="5dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/settingNameTextView"
+        android:layout_width="140dip"
+        android:text="Breakpoint Play"
+        android:textColor="#fff"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/leftImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dip"
+        android:paddingLeft="40dip"
+        android:src="@drawable/left" />
+
+    <TextView
+        android:id="@+id/settingOptionTextView"
+        android:layout_width="65dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dip"
+        android:gravity="center_horizontal"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/rightImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dip"
+        android:src="@drawable/right" />
+
+</LinearLayout>

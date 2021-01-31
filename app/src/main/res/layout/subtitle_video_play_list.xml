@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+
+    android:layout_height="fill_parent"
+
+    android:background="@drawable/playlist_bg"
+
+    android:orientation="vertical"
+
+    android:paddingRight="70dip">
+
+
+    <TextView
+
+        android:layout_width="fill_parent"
+
+        android:layout_height="wrap_content"
+
+        android:focusable="false"
+
+        android:gravity="center"
+
+        android:paddingLeft="5dip"
+
+        android:paddingTop="8dip"
+
+        android:text="@string/subtitleList"
+
+        android:textColor="#FFFFFF"
+
+        android:textSize="15sp"
+
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="500dip"
+
+        android:layout_gravity="center_vertical"
+
+        android:focusable="true"
+
+        android:gravity="center_horizontal"
+
+        android:paddingTop="16dip">
+
+
+        <ListView
+
+            android:id="@+id/subtitle_list"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="337dip"
+
+            android:layout_marginLeft="15dip"
+
+            android:focusable="true"
+
+            android:listSelector="#ff00ff"
+
+            android:minHeight="50dip"
+
+            android:paddingLeft="45dip"
+
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

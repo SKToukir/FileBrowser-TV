@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/video_glsurfaceview_layout"
+        android:layout_width="950dip"
+        android:layout_height="150dip"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="30dip"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/thumbnail_topline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line"
+            android:visibility="gone" />
+
+        <com.walton.filebrowser.business.video.VideoGLSurfaceView
+            android:id="@+id/video_glsurfaceview"
+            android:layout_width="950dip"
+            android:layout_height="150dip"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/thumbnail_bottomline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</FrameLayout>

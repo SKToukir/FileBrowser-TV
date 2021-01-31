@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/music_suspension_layout2"
+
+    android:layout_width="fill_parent"
+
+    android:layout_height="fill_parent"
+
+    android:background="@drawable/m_background"
+
+    android:screenOrientation="portrait">
+
+
+    <com.walton.filebrowser.ui.music.ScrollableViewGroup
+
+        android:id="@+id/ViewFlipper"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="match_parent"
+
+        android:layout_above="@+id/musiccontrol"
+
+        android:gravity="center"
+
+        android:visibility="gone">
+
+
+        <include
+
+            android:id="@+id/frmMain"
+
+            layout="@layout/music_playlayout"
+
+            android:visibility="gone" />
+
+
+        <include
+
+            android:id="@+id/frmList"
+
+            layout="@layout/listlayout" />
+
+    </com.walton.filebrowser.ui.music.ScrollableViewGroup>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@id/musiccontrol"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="100dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_centerInParent="true"
+            android:clipChildren="true"
+            android:clipToPadding="true"
+            android:visibility="visible"
+            card_view:cardBackgroundColor="#fff"
+            card_view:cardCornerRadius="160dp">
+
+
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                card_view:cardBackgroundColor="#ffffff"
+                card_view:cardCornerRadius="150dp">
+
+
+                <com.walton.filebrowser.ui.visualizer.WaveLoadingView
+                    android:id="@+id/waveLoadingView"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/test_one"
+                    android:visibility="visible"
+                    app:wlv_borderWidth="3dp"
+                    app:wlv_progressValue="40"
+                    app:wlv_round_rectangle="true"
+                    app:wlv_waveAmplitude="30" />
+
+                <com.walton.filebrowser.ui.visualizer.WaveLoadingView2
+                    android:id="@+id/waveLoadingView2"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="#00000000"
+                    android:visibility="visible"
+                    app:wlv_borderWidth="3dp"
+                    app:wlv_progressValue="40"
+                    app:wlv_round_rectangle="true"
+                    app:wlv_waveAmplitude="30" />
+
+                <com.walton.filebrowser.ui.visualizer.WaveLoadingView3
+                    android:id="@+id/waveLoadingView3"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="#00000000"
+                    android:visibility="visible"
+                    app:wlv_borderWidth="3dp"
+                    app:wlv_progressValue="40"
+                    app:wlv_round_rectangle="true"
+                    app:wlv_waveAmplitude="30" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/px960"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/musiccontrol"
+
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/px50">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/px350"
+            android:layout_height="@dimen/px350"
+            android:layout_above="@+id/music_current_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5px"
+            app:cardCornerRadius="10px">
+
+            <ImageView
+                android:id="@+id/imgThumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.walton.filebrowser.ui.view.MarqueeTextView
+            android:id="@+id/music_current_name"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lnl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px20"
+            android:layout_marginBottom="40px"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            tools:ignore="EllipsizeMaxLines" />
+
+        <LinearLayout
+            android:id="@+id/lnl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center|left"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <ImageView
+                    android:id="@+id/imgHeadPhone"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_mic"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/imgHeadPhone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="2px"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="5dp"
+                    android:text="Playlist"
+                    android:textColor="#C1C0C0"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/txtSongItemCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="2px"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="5dp"
+                    android:text=""
+                    android:textColor="#C1C0C0"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="@dimen/px700"
+                android:layout_height="1px"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10px"
+                android:background="@drawable/divider_half" />
+
+            <androidx.leanback.widget.HorizontalGridView
+                android:id="@+id/horizontalgridviewSubMusicItem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px200"
+                android:layout_above="@+id/imgBelowMore"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                app:numberOfRows="1" />
+
+
+            <ImageView
+                android:id="@+id/imgBelowMore"
+                android:layout_width="40dp"
+                android:layout_height="14dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_down"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@+id/musiccontrol"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+
+        android:layout_centerHorizontal="true"
+
+        android:clipChildren="false"
+
+        android:clipToPadding="false"
+
+        android:gravity="center_horizontal"
+
+        android:orientation="horizontal">
+
+
+        <include layout="@layout/music_player_control" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

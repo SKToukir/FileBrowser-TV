@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.walton.filebrowser"
+    android:sharedUserId="android.uid.system"
+    tools:ignore="MissingLeanbackLauncher">
+
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SET_ANIMATION_SCALE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <protected-broadcast android:name="action_media_scanner_stop" />
+    <protected-broadcast android:name="action_media_scanner_start" />
+
+    <application
+        android:name="com.walton.filebrowser.ui.MediaContainerApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name_app"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
+        <uses-library android:name="com.mstar.android" />
+
+        <activity
+            android:name=".ui.music.MusicPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="file" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FocusTest"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="file" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.walton.filebrowser.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"
+                tools:replace="android:resource"/>
+
+        </provider>
+
+        <activity android:name=".util.VideoPlayActivity" />
+        <activity android:name=".USBFilesActivity" />
+
+        <activity
+            android:name=".ui.video.VideoPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="file" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.mstar.android.intent.action.START_LOCAL_MEDIA" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="file" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".receiver.UsbSatesReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.MEDIA_BAD_REMOVAL" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                <action android:name="android.os.storage.action.DISK_SCANNED" />
+                <action android:name="android.os.storage.action.VOLUME_STATE_CHANGED" />
+                <action android:name="android.hardware.usb.action.USB_STATE" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.UsbService">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ui.main.RootActivity"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="adjustPan|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+
+        <activity
+            android:name=".ui.main.FileBrowserActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
+<!--            <intent-filter>-->
+<!--                <action android:name="com.mstar.android.intent.action.START_MEDIA_BROWSER" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name="com.walton.filebrowser.ui.photo.ImagePlayerActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="file" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.video.DlnaVideoPlayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ui.video.NetVideoPlayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <!--  <activity
+             android:name="com.xuc.timedtexttest.TimedTextTestActivity"
+             android:configChanges="orientation|keyboardHidden|navigation"
+             android:screenOrientation="landscape"
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+         </activity> -->
+
+        <activity
+            android:name=".ui.video.FloatVideoListActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name=".ui.common.GoldenLeftEyeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ui.gridvideo.MWPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ui.multiplayback.MultiPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <receiver android:name=".util.NetworkStatusChangeReceiver">
+            <intent-filter>
+                <action android:name="com.mstar.android.pppoe.PPPOE_STATE_ACTION" />
+                <action android:name="com.mstar.android.ethernet.ETHERNET_STATE_CHANGED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE_IMMEDIATE" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Music broadcast module Service -->
+        <service
+            android:name=".ui.music.MediaService"
+            android:enabled="true" />
+
+        <!-- float video play Service -->
+        <service android:name=".ui.video.FloatVideoPlayService">
+            <intent-filter>
+                <action android:name="com.mstar.android.intent.action.START_FLOAT_VIDEO_SERVICE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".ui.video.LocalMediaService">
+            <intent-filter>
+                <action android:name="com.mstar.android.intent.action.START_MEDIA_BROWSER" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.mstar.android.intent.action.START_LOCAL_MEDIA_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <!-- Pictures broadcast module -->
+        <activity
+            android:name="com.walton.filebrowser.ui.photo.PhotoPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <service
+            android:name=".service.MusicService"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

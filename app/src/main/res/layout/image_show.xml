@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:screenOrientation="portrait">
+
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/aviPhoto"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/imageplayersurfaceview" />
+        <!--<include
+               android:id="@+id/surfaceView"
+               layout="@layout/imagesurfaceview" />-->
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <include layout="@layout/photo_player_control" />
+    </LinearLayout>
+
+</FrameLayout>

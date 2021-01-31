@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="260dp"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/customfontstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="Rename File"
+        android:textColor="#ffffff"
+        android:textSize="26sp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/selector_edit"
+        android:paddingLeft="@dimen/px10"
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
+
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:paddingTop="@dimen/px30"
+        android:paddingBottom="@dimen/px30"
+        android:gravity="center"
+        android:weightSum="7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/btn_dialog_normal"
+            android:text="Ok"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_weight="1.9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/btn_cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/btn_dialog_normal"
+            android:text="Cancel"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,195 @@
+//<MStar Software>
+//******************************************************************************
+// MStar Software
+// Copyright (c) 2010 - 2012 MStar Semiconductor, Inc. All rights reserved.
+// All software, firmware and related documentation herein ("MStar Software") are
+// intellectual property of MStar Semiconductor, Inc. ("MStar") and protected by
+// law, including, but not limited to, copyright law and international treaties.
+// Any use, modification, reproduction, retransmission, or republication of all
+// or part of MStar Software is expressly prohibited, unless prior written
+// permission has been granted by MStar.
+//
+// By accessing, browsing and/or using MStar Software, you acknowledge that you
+// have read, understood, and agree, to be bound by below terms ("Terms") and to
+// comply with all applicable laws and regulations:
+//
+// 1. MStar shall retain any and all right, ownership and interest to MStar
+//    Software and any modification/derivatives thereof.
+//    No right, ownership, or interest to MStar Software and any
+//    modification/derivatives thereof is transferred to you under Terms.
+//
+// 2. You understand that MStar Software might include, incorporate or be
+//    supplied together with third party's software and the use of MStar
+//    Software may require additional licenses from third parties.
+//    Therefore, you hereby agree it is your sole responsibility to separately
+//    obtain any and all third party right and license necessary for your use of
+//    such third party's software.
+//
+// 3. MStar Software and any modification/derivatives thereof shall be deemed as
+//    MStar's confidential information and you agree to keep MStar's
+//    confidential information in strictest confidence and not disclose to any
+//    third party.
+//
+// 4. MStar Software is provided on an "AS IS" basis without warranties of any
+//    kind. Any warranties are hereby expressly disclaimed by MStar, including
+//    without limitation, any warranties of merchantability, non-infringement of
+//    intellectual property rights, fitness for a particular purpose, error free
+//    and in conformity with any international standard.  You agree to waive any
+//    claim against MStar for any loss, damage, cost or expense that you may
+//    incur related to your use of MStar Software.
+//    In no event shall MStar be liable for any direct, indirect, incidental or
+//    consequential damages, including without limitation, lost of profit or
+//    revenues, lost or damage of data, and unauthorized system use.
+//    You agree that this Section 4 shall still apply without being affected
+//    even if MStar Software has been modified by MStar in accordance with your
+//    request or instruction for your use, except otherwise agreed by both
+//    parties in writing.
+//
+// 5. If requested, MStar may from time to time provide technical supports or
+//    services in relation with MStar Software to you for your use of
+//    MStar Software in conjunction with your or your customer's product
+//    ("Services").
+//    You understand and agree that, except otherwise agreed by both parties in
+//    writing, Services are provided on an "AS IS" basis and the warranty
+//    disclaimer set forth in Section 4 above shall apply.
+//
+// 6. Nothing contained herein shall be construed as by implication, estoppels
+//    or otherwise:
+//    (a) conferring any license or right to use MStar name, trademark, service
+//        mark, symbol or any other identification;
+//    (b) obligating MStar or any of its affiliates to furnish any person,
+//        including without limitation, you and your customers, any assistance
+//        of any kind whatsoever, or any information; or
+//    (c) conferring any license or right under any intellectual property right.
+//
+// 7. These terms shall be governed by and construed in accordance with the laws
+//    of Taiwan, R.O.C., excluding its conflict of law rules.
+//    Any and all dispute arising out hereof or related hereto shall be finally
+//    settled by arbitration referred to the Chinese Arbitration Association,
+//    Taipei in accordance with the ROC Arbitration Law and the Arbitration
+//    Rules of the Association by three (3) arbitrators appointed in accordance
+//    with the said Rules.
+//    The place of arbitration shall be in Taipei, Taiwan and the language shall
+//    be English.
+//    The arbitration award shall be final and binding to both parties.
+//
+//******************************************************************************
+//<MStar Software>
+package com.walton.filebrowser.ui.video;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+import com.walton.filebrowser.util.Constants;
+
+/**
+ * DatabaseHelper
+ * Created by nate.luo on 13-9-26.
+ *
+ */
+
+public class DatabaseHelper extends SQLiteOpenHelper {
+
+    private static final int VERSION = 1;
+    private static final String VIDEO_ID = "id";
+    private static final String VIDEO_NAME = "name";
+    private static final String VIDEO_PATH = "path";
+    private static final String VIDEO_CHECK = "checked";
+
+    public DatabaseHelper(Context context, String dbName, SQLiteDatabase.CursorFactory factory,
+                          int version) {
+        //必须通过super调用父类当中的构造函数
+        super(context, dbName, factory, version);
+    }
+
+    public DatabaseHelper(Context context, String dbName, int version){
+        this(context,dbName,null,version);
+    }
+
+    public DatabaseHelper(Context context, String dbName){
+        this(context,dbName,VERSION);
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        // Attention:注意SQL语法，每个变量后需要有空格，否则不认识。
+        String sql = "CREATE TABLE " + Constants.VIDEO_PLAY_LIST_TABLE_NAME + " (" + VIDEO_ID
+                + " INTEGER PRIMARY KEY AUTOINCREMENT," + VIDEO_NAME + " TEXT NOT NULL," +
+                VIDEO_PATH + " TEXT NOT NULL," + VIDEO_CHECK + " BOOLEAN);";
+
+        db.execSQL(sql);
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+     //   db.execSQL("DROP TABLE IF EXISTS " + Constants.VIDEO_PLAY_LIST_TABLE_NAME);
+        onCreate(db);
+    }
+
+    /**
+     * 返回所有数据
+     * @return
+     */
+    public Cursor selectAll(String tableName){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(tableName, null, null, null, null, null, null);
+    //    Cursor cursor = db.query(tableName, null, null, null,null, null, null);
+        return cursor;
+    }
+
+    /**
+     * 根据条件查询
+     * @param columnsName
+     * @return
+     */
+    public Cursor selectForChecked(String tableName, boolean isChecked){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] cloumns = {VIDEO_NAME, VIDEO_PATH, VIDEO_CHECK};
+        String where = VIDEO_CHECK + "=?";
+        int check = 0;
+        if (isChecked){
+            check = 1;
+        }
+        String[] whereValue={Integer.toString(check)};
+        Cursor cursor = db.query(tableName, null, where, whereValue,null, null, "id desc");
+//        db.query(true, TB_NAME, columns, selection, selectionArgs, groupBy, having, orderBy, limit)
+        return cursor;
+    }
+
+    public long insert(String tableName, String name, String path,int checked){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(VIDEO_NAME, name);
+        cv.put(VIDEO_PATH, path);
+        cv.put(VIDEO_CHECK, checked);
+        long row = db.insert(tableName, null, cv);
+//        db.close();
+        return row;
+
+    }
+
+    public void deleteTableAllItems(String tableName)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+//        String where = VIDEO_NAME + "=?";
+//       // String[] whereValue={Integer.toString(index)};
+//        String[] whereValue={name};
+//        db.delete(tableName, where, whereValue);
+        String sqlCmd = "DELETE FROM " + tableName;
+        db.execSQL(sqlCmd);
+    }
+//
+//    public void update(String name,boolean check)
+//    {
+//        SQLiteDatabase db=this.getWritableDatabase();
+//        String where=VIDEO_NAME+"=?";
+//      //  String[] whereValue={Integer.toString(index)};
+//        String[] whereValue={name};
+//        ContentValues cv=new ContentValues();
+//        cv.put(VIDEO_PATH, check);
+//        db.update(TB_NAME, cv, where, whereValue);
+//    }
+}

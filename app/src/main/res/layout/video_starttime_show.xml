@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/info_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="20dip">
+
+    <TextView
+        android:id="@+id/video_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingLeft="120dip"
+        android:text="@string/video_start_time"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/videoname_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/video_start_time">
+
+        <TextView
+            android:id="@+id/videoname"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="25dip"
+            android:paddingRight="15dip"
+            android:text="@string/file_name"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/video_name"
+            android:layout_width="650dip"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/videoname"
+            android:paddingTop="25dip"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buffertime_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoname_rl">
+
+        <TextView
+            android:id="@+id/buffertime"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="25dip"
+            android:paddingRight="15dip"
+            android:text="@string/video_buffer_time"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/buffer_time"
+            android:layout_width="650dip"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/buffertime"
+            android:paddingTop="25dip"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buffertime_rl">
+
+        <TextView
+            android:id="@+id/firstframe"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="15dip"
+            android:paddingRight="15dip"
+            android:text="@string/video_first_video_frame_time"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/first_frame"
+            android:layout_width="350dip"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/firstframe"
+            android:paddingTop="15dip"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
